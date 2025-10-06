@@ -1,0 +1,146 @@
+
+==============================
+ Linux Commands Cheat Sheet
+ (Basic to Intermediate)
+==============================
+
+------------------------------------------------------------
+🔹 FILE & DIRECTORY NAVIGATION
+------------------------------------------------------------
+pwd                        -> Show current directory
+ls                         -> List files and directories
+ls -l                      -> Long listing with details
+ls -a                      -> Show hidden files
+cd <directory>             -> Change directory
+cd ..                      -> Go back one directory
+cd ~                       -> Go to home directory
+
+------------------------------------------------------------
+🔹 FILE & DIRECTORY MANAGEMENT
+------------------------------------------------------------
+touch file.txt             -> Create an empty file
+> file.txt                 -> Create empty or clear file
+mkdir foldername           -> Create a directory
+rmdir foldername           -> Remove empty directory
+rm file.txt                -> Delete a file
+rm -r foldername           -> Delete directory with contents
+cp file1 file2             -> Copy file
+cp -r folder1 folder2      -> Copy directory
+mv oldname newname         -> Rename or move file
+
+------------------------------------------------------------
+🔹 VIEWING & WRITING FILES
+------------------------------------------------------------
+cat file.txt               -> Show contents of a file
+more file.txt              -> View file (page by page)
+less file.txt              -> View file (scrollable)
+head file.txt              -> Show first 10 lines
+tail file.txt              -> Show last 10 lines
+nano file.txt              -> Edit file with Nano editor
+vim file.txt               -> Edit file with Vim editor
+echo "text" > file.txt     -> Write text into file (overwrite)
+echo "text" >> file.txt    -> Append text into file
+cat > file.txt             -> Write multiple lines, end with CTRL+D
+
+------------------------------------------------------------
+🔹 SEARCHING & FINDING
+------------------------------------------------------------
+grep "word" file.txt       -> Search for word inside file
+grep -i "word" file.txt    -> Case insensitive search
+grep -n "word" file.txt    -> Show line numbers in results
+grep -v "word" file.txt    -> Show lines NOT containing word
+grep -w "word" file.txt    -> Match whole word only
+find /path -name file.txt  -> Find a file by name
+history                    -> Show command history
+
+------------------------------------------------------------
+🔹 USER & PERMISSIONS
+------------------------------------------------------------
+whoami                     -> Show current user
+id                         -> Show user ID and groups
+chmod 755 file             -> Change file permissions
+chown user:group file      -> Change file ownership
+sudo command               -> Run command as superuser
+
+------------------------------------------------------------
+🔹 SYSTEM INFORMATION & MONITORING
+------------------------------------------------------------
+date                       -> Show date and time
+cal                        -> Show calendar
+uname -a                   -> Show system information
+df -h                      -> Show disk space usage
+du -sh folder              -> Show folder size
+free -h                    -> Show memory usage
+top                        -> Show running processes
+htop                       -> Advanced process viewer (if installed)
+uptime                     -> Show system uptime
+
+------------------------------------------------------------
+🔹 PROCESS MANAGEMENT
+------------------------------------------------------------
+ps                         -> Show processes
+ps aux                     -> Detailed list of processes
+kill <PID>                 -> Kill a process by ID
+killall processname        -> Kill process by name
+jobs                       -> Show background jobs
+fg %1                      -> Bring job to foreground
+bg %1                      -> Resume job in background
+
+------------------------------------------------------------
+🔹 NETWORKING
+------------------------------------------------------------
+ping google.com            -> Test network connection
+ifconfig                   -> Show network info (deprecated)
+ip a                       -> Show network interfaces
+curl http://example.com    -> Download or view web page
+wget http://example.com    -> Download file
+netstat -tulnp             -> Show open ports (if installed)
+ss -tulnp                  -> Show socket statistics
+
+------------------------------------------------------------
+🔹 PACKAGE MANAGEMENT (Ubuntu/Debian)
+------------------------------------------------------------
+sudo apt update            -> Update package list
+sudo apt upgrade           -> Upgrade installed packages
+sudo apt install package   -> Install package
+sudo apt remove package    -> Remove package
+
+------------------------------------------------------------
+🔹 ARCHIVES & COMPRESSION
+------------------------------------------------------------
+tar -cvf archive.tar dir   -> Create tar archive
+tar -xvf archive.tar       -> Extract tar archive
+tar -czvf archive.tar.gz dir -> Create gzipped tar archive
+tar -xzvf archive.tar.gz   -> Extract gzipped tar archive
+zip file.zip file1 file2   -> Create zip file
+unzip file.zip             -> Extract zip file
+
+------------------------------------------------------------
+🔹 ADVANCED TEXT PROCESSING
+------------------------------------------------------------
+sed 's/old/new/g' file.txt -> Replace text in file (not permanent)
+sed -i 's/old/new/g' file.txt -> Replace text permanently
+awk '{print $1}' file.txt  -> Print first column
+sort file.txt              -> Sort file content
+uniq file.txt              -> Remove duplicate lines
+
+------------------------------------------------------------
+🔹 SHORTCUTS & TRICKS
+------------------------------------------------------------
+CTRL + C                   -> Stop a running process
+CTRL + Z                   -> Suspend a process
+CTRL + D                   -> End input or logout
+!!                          -> Run last command again
+!n                          -> Run nth command from history
+clear                       -> Clear terminal screen
+
+------------------------------------------------------------
+🔹 FILE TRANSFER (BASIC)
+------------------------------------------------------------
+scp file.txt user@server:/path -> Copy file to remote server
+scp user@server:/path/file.txt . -> Copy file from remote server
+sftp user@server           -> Secure FTP session
+
+==============================
+End of Cheat Sheet
+==============================
